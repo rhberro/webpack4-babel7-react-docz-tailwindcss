@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700';
+
 .animate {
   transition-property: all;
   transition-timing-function: ease;
@@ -17,12 +19,4 @@
 
 .animate-200 {
   transition-duration: 200ms;
-}
-
-.animate-300 {
-  transition-duration: 300ms;
-}
-
-.animate-500 {
-  transition-duration: 500ms;
 }

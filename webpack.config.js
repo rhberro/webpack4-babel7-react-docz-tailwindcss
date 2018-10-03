@@ -18,8 +18,8 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              "@babel/preset-env",
-              "@babel/preset-react"
+              '@babel/preset-env',
+              '@babel/preset-react'
             ]
           }
         }
@@ -43,5 +43,8 @@ module.exports = {
       }
     )
   ],
-  devtool: 'eval-cheap-module-source-map'
+  devtool: 'eval-cheap-module-source-map',
+  devServer: {
+    contentBase: path.resolve(__dirname, 'build')
+  }
 }

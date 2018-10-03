@@ -1,13 +1,15 @@
 import React, { Component, Fragment } from 'react'
 
-import Button from '../Button'
 import Icon from '../Icon'
+import Button from '../Button'
 
 import ImageHero from '../../assets/images/image-hero.jpg'
 import ImageFamily from '../../assets/images/image-family.png'
 import ImageBookshelf from '../../assets/images/image-bookshelf.png'
 import ImageBook from '../../assets/images/image-book.png'
 import ImageMonsters from '../../assets/images/image-monsters.png'
+
+import { BUTTON_VARIATIONS } from '../../constants/Button'
 
 import '../../assets/stylesheets/index.css'
 import '../../assets/stylesheets/transition.css'
@@ -41,7 +43,7 @@ class Layout extends Component {
             </p>
             <div>
               <Button>How does it work?</Button>
-              <Button className='ml-3' outlined>Explore Library</Button>
+              <Button className='ml-3' variation={BUTTON_VARIATIONS.OUTLINED}>Explore Library</Button>
             </div>
             <a className='font-display font-bold text-purple text-sm mt-6' href='#'>
               <Icon className='fill-current text-purple w-5 h-5 align-middle' name='badge' /> Parents' Choice Approved App
@@ -66,7 +68,7 @@ class Layout extends Component {
               <img className='mb-5 w-24' src={ImageBookshelf} />
               <h4 className='font-display text-2xl text-black mb-5'>Teach Valuable Life Lessons</h4>
               <p className='font-display text-lg font-medium leading-loose text-grey-dark'>We deeply care about diversity and empowerment - each Storyworld contains educational aspects and storytelling tips to teach valuable life lessons.</p>
-              </div>
+            </div>
             <div className='flex-1 pl-10'>
               <img className='mb-5 w-24' src={ImageBook} />
               <h4 className='font-display text-2xl text-black mb-5'>A Safety Net for Storytelling</h4>
@@ -113,7 +115,7 @@ class Layout extends Component {
               <p className='font-display text-md font-medium text-grey-dark text-center'>possible stories</p>
             </div>
           </div>
-          <Button className='mx-auto mb-8' fill>Browse our Library</Button>
+          <Button className='mx-auto mb-8' block>Browse our Library</Button>
           <p className='font-display font-medium text-grey-dark text-xs mt-5 text-center' href='#'>
             <Icon className='fill-current text-grey-dark w-4 h-4 align-middle' name='notification' /> We’re releasing new Storyworlds <a className='underline text-grey-dark hover:text-purple' href='#'>every two weeks</a>.
           </p>
@@ -123,7 +125,7 @@ class Layout extends Component {
           <div className='container mx-auto'>
             <h2 className='font-display text-center text-5xl text-black mb-8'>Don't be shy, say hi!</h2>
             <p className='font-display text-lg font-medium mb-8 leading-normal text-grey-dark w-2/5 text-center mx-auto'>We might deal with trolls, werewolfs and huge dogs, but we don’t bite.</p>
-            <Button className='mx-auto mb-8' fill>Get in touch</Button>
+            <Button className='mx-auto mb-8' block>Get in touch</Button>
             <img className='w-3/5 mx-auto block' src={ImageMonsters} />
           </div>
         </div>

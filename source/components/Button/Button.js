@@ -1,54 +1,83 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const THEMES = {
-  PRIMARY: {
-    background: 'purple',
-    border: 'purple',
-    color: 'white',
-    display: 'inline'
-  },
-  INVERTED: {
-    background: 'white',
-    border: 'white',
-    color: 'purple',
-    display: 'inline'
-  }
-}
+import { classNames } from '../../utilities/class-utility'
+import { BUTTON_SIZES, BUTTON_VARIATIONS } from '../../constants/Button'
 
 function Button (props) {
-  const { children, className, fill, theme, outlined } = props
-  let { background, border, border: colorHover, color, display } = THEMES[theme] || THEMES.PRIMARY
+  const { disabled, children, onClick } = props
 
-  if (outlined) {
-    background = color
-    color = border
-    colorHover = 'white'
-  }
-
-  if (fill) {
-    display = 'block'
-  }
+  const classes = classNames(
+    'animate-100',
+    'animate',
+    'border-2',
+    'border-solid',
+    'font-display',
+    'font-medium',
+    `hover:bg-purple-dark`,
+    `hover:border-purple-dark`,
+    'hover:text-white',
+    'rounded-lg',
+    {
+      'block': props.block
+    },
+    {
+      'border-purple': props.variation !== BUTTON_VARIATIONS.LINK,
+      'border-transparent': props.variation === BUTTON_VARIATIONS.LINK
+    },
+    {
+      'bg-purple': props.variation === BUTTON_VARIATIONS.FILLED
+    },
+    {
+      'text-white': props.variation === BUTTON_VARIATIONS.FILLED,
+      'text-grey': props.variation === BUTTON_VARIATIONS.LINK,
+      'text-purple': props.variation === BUTTON_VARIATIONS.OUTLINED
+    },
+    {
+      'text-sm p-2': props.size === BUTTON_SIZES.SMALL,
+      'text-md p-3': props.size === BUTTON_SIZES.MEDIUM,
+      'text-lg p-4': props.size === BUTTON_SIZES.LARGE
+    },
+    props.className
+  )
 
   return (
-    <button className={`font-display font-medium text-lg text-${color} hover:text-${colorHover} rounded-lg p-3 bg-${background} hover:bg-${border}-dark border-${border} border-solid border-2 hover:border-${border}-dark animate animate-100 ${display} ${className}`}>
+    <button disabled={disabled} className={classes} onClick={onClick}>
       { children }
     </button>
   )
 }
 
 Button.propTypes = {
-  theme: PropTypes.oneOf(
-    Object.keys(THEMES)
+  /** Block */
+  block: PropTypes.bool,
+  /** Class */
+  className: PropTypes.oneOf(
+    PropTypes.string,
+    PropTypes.object
   ),
-  outlined: PropTypes.bool,
-  fill: PropTypes.bool
+  /** Disabled */
+  disabled: PropTypes.bool,
+
+  /** onClick */
+  onClick: PropTypes.func,
+  /** Size */
+  size: PropTypes.oneOf(
+    Object.values(BUTTON_SIZES)
+  ),
+  /** Variation */
+  variation: PropTypes.oneOf(
+    Object.values(BUTTON_VARIATIONS)
+  )
 }
 
 Button.defaultProps = {
-  theme: 'PRIMARY',
-  outlined: false,
-  fill: false
+  block: false,
+  className: null,
+  disabled: false,
+  onClick: null,
+  size: BUTTON_SIZES.MEDIUM,
+  variation: BUTTON_VARIATIONS.FILLED
 }
 
 export default Button
