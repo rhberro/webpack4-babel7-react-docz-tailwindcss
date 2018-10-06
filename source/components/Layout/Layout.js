@@ -15,6 +15,10 @@ import '../../assets/stylesheets/index.css'
 import '../../assets/stylesheets/transition.css'
 
 class Layout extends Component {
+  onClick () {
+    this.showModal()
+  }
+
   render () {
     return (
       <Fragment>
@@ -42,7 +46,7 @@ class Layout extends Component {
               Awake the inner storyteller with diverse and empowering stories for young & old. Storytelling has never been easier.
             </p>
             <div>
-              <Button>How does it work?</Button>
+              <Button onClick={this.onClick}>How does it work?</Button>
               <Button className='ml-3' variation={BUTTON_VARIATIONS.OUTLINED}>Explore Library</Button>
             </div>
             <a className='font-display font-bold text-purple text-sm mt-6' href='#'>
