@@ -52,9 +52,11 @@ Button.propTypes = {
   /** Block */
   block: PropTypes.bool,
   /** Class */
-  className: PropTypes.oneOf(
-    PropTypes.string,
-    PropTypes.object
+  className: PropTypes.oneOfType(
+    [
+      PropTypes.string,
+      PropTypes.object
+    ]
   ),
   /** Disabled */
   disabled: PropTypes.bool,
