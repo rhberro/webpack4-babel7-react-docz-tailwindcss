@@ -4,7 +4,6 @@
  * @return { String } The classes to be joined as a string separated by a blank space.
  */
 export function classNames () {
-  console.log('Debugger:', 'classNames()')
   const classes = []
 
   for (const classPosition in arguments) {

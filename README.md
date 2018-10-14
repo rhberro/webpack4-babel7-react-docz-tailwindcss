@@ -1,9 +1,9 @@
-# Spotifood
+# The project name
 
-[ ![Codeship Status for rhberro/ifood-frontend-test](https://app.codeship.com/projects/861206c0-7055-0136-0903-5248fdda3e37/status?branch=master)](https://app.codeship.com/projects/299009)
+[ ![Codeship Status for rhberro/webpack4-babel7-react-docz-tailwindcss](https://app.codeship.com/projects/e9f2bb50-b214-0136-7c29-3ec818f64420/status?branch=deployment)](https://app.codeship.com/projects/310634)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-A web application used to display the preferred playlists from iFood's customers.
+The project description.
 
 ---
 
@@ -23,27 +23,22 @@ git clone git@github.com:rhberro/ifood-frontend-test.git your-project-name
 
 ## Getting Started
 
-Run node package manager install command or yarn to install the project dependencies.
+Run node package manager install command to install the project dependencies.
 
 ```js
 npm install
 ```
 
-Make a copy of the .env.example file and fill it with your Spotify token from [this link](https://developer.spotify.com/console/get-featured-playlists).
-
-```
-cp .env.example .env
-```
-
-Start the application using the node package manager or yarn start command.
+Start the application using the node package manager start command.
 
 ```js
 npm start
 ```
 
-## Todos
-  - [ ] Write tests.
-  - [ ] Use React Router to keep the user filters whenever necessary.
-  - [x] Use Redux for the application state.
-  - [ ] Add a step to authenticate to Spotify without the need of manual work.
-  - [ ] Use Debounce to prevent unnecessary updates to the state when searching.
+## Testing
+
+Run node package manager test command to run the project tests and ensure that everything is still working.
+
+```js
+npm test
+```

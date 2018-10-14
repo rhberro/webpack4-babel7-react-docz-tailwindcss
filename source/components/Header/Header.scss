@@ -1,0 +1,9 @@
+@import '../../assets/stylesheets/colors';
+
+.header {
+  padding: 15px 30px;
+
+  &__title {
+    color: $color-primary;
+  }
+}
