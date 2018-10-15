@@ -7,7 +7,7 @@ describe(
   'source/components/Button/Button.js', function () {
     it(
       'renders a header element', function () {
-        const wrapper = shallow(<Button />)
+        const wrapper = shallow(<Button>Button</Button>)
         expect(wrapper.find('button')).toHaveLength(1)
       }
     )

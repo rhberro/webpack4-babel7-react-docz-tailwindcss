@@ -9,7 +9,7 @@ The project description.
 
 - [**Installing**](#installing)
 - [**Getting Started**](#getting-started)
-- [**Todos**](#todos)
+- [**Testing**](#Testing)
 
 ---
 
