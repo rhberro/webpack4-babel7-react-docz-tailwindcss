@@ -9,6 +9,12 @@ module.exports = {
         '@babel/preset-react'
       ]
     },
+    development: {
+      presets: [
+        '@babel/preset-env',
+        '@babel/preset-react'
+      ]
+    },
     production: {
       presets: [
         [

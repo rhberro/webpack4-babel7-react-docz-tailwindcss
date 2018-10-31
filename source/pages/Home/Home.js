@@ -4,7 +4,7 @@ import './Home.scss'
 
 function Home (props) {
   return (
-    <main class='home'>
+    <main className='home'>
       Home
     </main>
   )

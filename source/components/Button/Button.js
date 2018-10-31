@@ -6,7 +6,7 @@ import './Button.scss'
 function Button (props) {
   const { children } = props
   return (
-    <button>
+    <button className='button button--outlined'>
       { children }
     </button>
   )

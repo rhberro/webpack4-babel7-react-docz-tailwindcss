@@ -1,9 +1,7 @@
-# The project name
+# Polvilho
 
 [ ![Codeship Status for rhberro/webpack4-babel7-react-docz-tailwindcss](https://app.codeship.com/projects/e9f2bb50-b214-0136-7c29-3ec818f64420/status?branch=deployment)](https://app.codeship.com/projects/310634)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
-The project description.
 
 ---
 
@@ -37,7 +35,7 @@ npm start
 
 ## Testing
 
-Run node package manager test command to run the project tests and ensure that everything is still working.
+Run node package manager test command to run the project tests.
 
 ```js
 npm test
