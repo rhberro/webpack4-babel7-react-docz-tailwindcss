@@ -1,5 +1,9 @@
 {
   "private": true,
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "start": "webpack-dev-server --config webpack.development.js",
     "build": "webpack --config webpack.production.js",
@@ -22,6 +26,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@sentry/browser": "^4.1.1",
@@ -30,14 +35,20 @@
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
+    "dotenv-webpack": "^1.5.7",
     "file-loader": "^2.0.0",
+    "firebase": "^5.5.8",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.3",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
-    "regenerator-runtime": "^0.12.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.20.2",

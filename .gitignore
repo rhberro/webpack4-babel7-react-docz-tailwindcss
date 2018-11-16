@@ -6,3 +6,4 @@
 
 # Application.
 /build/
+.env

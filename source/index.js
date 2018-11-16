@@ -2,18 +2,31 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import About from './pages/About'
 import Home from './pages/Home'
 import Layout from './layouts/Layout'
+import Signin from './pages/Signin'
+import Signup from './pages/Signup'
+
+import SentryProvider from './providers/Sentry'
+import FirebaseProvider from './providers/Firebase'
+
+import ApplicationStore from './store'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Layout>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/about' component={About} />
-      </Switch>
-    </Layout>
-  </BrowserRouter>,
+  <SentryProvider>
+    <FirebaseProvider>
+      <ApplicationStore>
+        <BrowserRouter>
+          <Layout>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/signin' component={Signin} />
+              <Route exact path='/signup' component={Signup} />
+            </Switch>
+          </Layout>
+        </BrowserRouter>
+      </ApplicationStore>
+    </FirebaseProvider>
+  </SentryProvider>,
   document.getElementById('application')
 )

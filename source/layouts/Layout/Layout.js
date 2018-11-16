@@ -1,18 +1,19 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
-import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import Notifications from '../../components/Notifications/Notifications'
 
 import './Layout.scss'
 
 function Layout (props) {
   const { children } = props
   return (
-    <Fragment>
+    <Notifications>
       <Header />
       { children }
       <Footer />
-    </Fragment>
+    </Notifications>
   )
 }
 
