@@ -32,7 +32,10 @@ module.exports = {
         [
           [
             '@babel/preset-env',
-            { useBuiltIns: 'usage' }
+            {
+              modules: false,
+              useBuiltIns: 'usage'
+            }
           ]
         ],
         '@babel/preset-react'
