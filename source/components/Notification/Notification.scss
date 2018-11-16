@@ -1,0 +1,93 @@
+@charset 'utf-8';
+
+@import '../../assets/stylesheets/colors';
+@import '../../assets/stylesheets/fonts';
+@import '../../assets/stylesheets/reset';
+@import '../../assets/stylesheets/shadows';
+
+@import '../../assets/stylesheets/mixins/accelerate';
+
+#notifications {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 30px; right: 30px;
+}
+
+.notification {
+  @include accelerate();
+  display: inline-flex;
+  align-self: flex-end;
+  font-family: 'Quicksand';
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: $shadow;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &__icon {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .icon {
+      fill: $color-primary;
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+    color: $text-secondary;
+  }
+
+  &__close {
+    padding: 30px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #f9f9f9;
+    margin-left: 30px;
+
+    .icon {
+      fill: #ccc;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+// animation.
+.notification {
+  animation-name: appear;
+  animation-duration: 300ms;
+  animation-timing-function: ease;
+  transition-duration: 300ms;
+  transition-property: transform;
+  transition-timing-function: ease;
+
+  &--hidden {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

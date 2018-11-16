@@ -4,7 +4,7 @@ export default {
   plugins: [
     css(
       {
-        preprocessor: 'postcss'
+        preprocessor: 'sass'
       }
     )
   ]

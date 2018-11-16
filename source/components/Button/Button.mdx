@@ -7,11 +7,6 @@ import { Playground, PropsTable } from 'docz'
 
 import Button from './Button'
 
-import { BUTTON_SIZES, BUTTON_VARIATIONS } from '../../constants/Button';
-
-import '../../assets/stylesheets/index.css'
-import '../../assets/stylesheets/transition.css'
-
 # Button
 
 ## Properties
@@ -22,21 +17,4 @@ import '../../assets/stylesheets/transition.css'
 
 <Playground>
   <Button>Button</Button>
-</Playground>
-
-## Sizes
-
-<Playground>
-  <Button size={BUTTON_SIZES.SMALL}>Small</Button>
-  <Button size={BUTTON_SIZES.MEDIUM}>Medium</Button>
-  <Button size={BUTTON_SIZES.LARGE}>Large</Button>
-</Playground>
-
-
-## Variations
-
-<Playground>
-  <Button variation={BUTTON_VARIATIONS.FILLED}>Filled</Button>
-  <Button variation={BUTTON_VARIATIONS.OUTLINED}>Outlined</Button>
-  <Button variation={BUTTON_VARIATIONS.LINK}>Link</Button>
 </Playground>

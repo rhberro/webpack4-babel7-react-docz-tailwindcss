@@ -1,0 +1,46 @@
+@charset 'utf-8';
+
+@import '../../assets/stylesheets/colors';
+@import '../../assets/stylesheets/fonts';
+
+button {
+  border: none;
+  padding: none;
+  outline: none;
+}
+
+.button {
+  background-color: $color-primary;
+  color: $white;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  transition-duration: 120ms;
+  transition-property: background-color;
+  transition-timing-function: ease;
+  border-style: solid;
+  border-color: $color-primary;
+  border-width: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button--outlined {
+  color: $color-primary;
+  background-color: transparent;
+}
+
+.button:hover {
+  color: $white;
+  background-color: lighten($color-primary, 5%);
+  border-color: lighten($color-primary, 5%);
+}
+
+.button:active {
+  background-color: darken($color-primary, 5%);
+  border-color: darken($color-primary, 5%);
+}

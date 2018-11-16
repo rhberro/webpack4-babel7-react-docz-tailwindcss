@@ -1,0 +1,6 @@
+@mixin accelerate($backface: true, $perspective: 1000px) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
+}

@@ -1,16 +1,32 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import * as Sentry from '@sentry/browser'
 
-import Layout from './components/Layout'
+import Home from './pages/Home'
+import Layout from './layouts/Layout'
+import Signin from './pages/Signin'
+import Signup from './pages/Signup'
 
-Sentry.init(
-  {
-    dsn: 'https://78554cb5053c4021a1abedb6fb00410a:8884ae9477c94624a57aac9b45298e52@sentry.io/1288483'
-  }
-)
+import SentryProvider from './providers/Sentry'
+import FirebaseProvider from './providers/Firebase'
+
+import ApplicationStore from './store'
 
 ReactDOM.render(
-  <Layout />,
+  <SentryProvider>
+    <FirebaseProvider>
+      <ApplicationStore>
+        <BrowserRouter>
+          <Layout>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/signin' component={Signin} />
+              <Route exact path='/signup' component={Signup} />
+            </Switch>
+          </Layout>
+        </BrowserRouter>
+      </ApplicationStore>
+    </FirebaseProvider>
+  </SentryProvider>,
   document.getElementById('application')
 )

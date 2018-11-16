@@ -1,0 +1,44 @@
+@import '../../assets/stylesheets/fonts';
+@import '../../assets/stylesheets/colors';
+@import '../../assets/stylesheets/reset';
+
+.header {
+  display: flex;
+  padding: 15px;
+  border-bottom-color: $light-gray;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  align-items: center;
+
+  &__title {
+    flex: 1;
+    font-size: 27px;
+    font-weight: bold;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 15px;
+  }
+
+  &__anchor {
+    display: block;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: $gray;
+
+    &--active {
+      color: $text-primary;
+      background-color: $light-gray;
+    }
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+}
