@@ -1,0 +1,12 @@
+# A redirect rule with all the supported properties
+[[redirects]]
+  from = "/*"
+  to = "/"
+
+  # The default HTTP status code is 301, but you can define a different one.
+  status = 200
+
+  # By default, redirects won't be applied if there's a file with the same 
+  # path as the one defined in the `from` property. Setting `force` to `true` 
+  # will make the redirect rule take precedence over any existing files.
+  force = true
