@@ -15,7 +15,7 @@ describe(
     it(
       'renders a h1 element', function () {
         const wrapper = shallow(<Header />)
-        expect(wrapper.find('h1').text()).toEqual('Polvilho')
+        expect(wrapper.find('h1').text()).toEqual('thebuddy')
       }
     )
   }
