@@ -30,13 +30,11 @@ module.exports = {
     production: {
       presets: [
         [
-          [
-            '@babel/preset-env',
-            {
-              modules: false,
-              useBuiltIns: 'usage'
-            }
-          ]
+          '@babel/preset-env',
+          {
+            modules: false,
+            useBuiltIns: 'usage'
+          }
         ],
         '@babel/preset-react'
       ],
